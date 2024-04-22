@@ -2,7 +2,7 @@
 var temp1;
 function fetchFlowData() {
   if(temp3===1){
-  fetch('https://api.thingspeak.com/channels/2292915/feeds.json?results=1')
+  fetch('https://api.thingspeak.com/channels/2516914/feeds.json?results=1')
   .then(response => response.json())
   .then(data => {
     const latestEntry = data.feeds[0];
@@ -17,7 +17,7 @@ function fetchFlowData() {
 
 function fetchPressureData() {
   if(temp2===1){
-  fetch('https://api.thingspeak.com/channels/2292915/feeds.json?results=1')
+  fetch('https://api.thingspeak.com/channels/2516914/feeds.json?results=1')
   .then(response => response.json())
   .then(data => {
     const latestEntry = data.feeds[0];
@@ -33,7 +33,7 @@ function fetchPressureData() {
 
 function checkData() {
   if(temp1===1){
-  fetch('https://api.thingspeak.com/channels/2292915/feeds.json?results=1')
+  fetch('https://api.thingspeak.com/channels/2516914/feeds.json?results=1')
   .then(response => response.json())
   .then(data => {
     const latestEntry = data.feeds[0];
@@ -112,7 +112,7 @@ document.getElementById('reset').addEventListener('click', () => {
 });
 function downloadCSV() {
   // Replace 'YOUR_CHANNEL_ID' with your ThingSpeak channel ID
-  var channelID = '2292915';
+  var channelID = '2516914';
   var url = 'https://api.thingspeak.com/channels/' + channelID + '/feeds.csv';
 
   // Fetch the CSV data from ThingSpeak
