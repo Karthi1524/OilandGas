@@ -24,7 +24,7 @@ function fetchPressureData() {
     const field3Value = latestEntry.field3;
     const field4Value = latestEntry.field4;
 
-    document.getElementById('dataDisplay').innerHTML = `Field3: ${field3Value}<br>Field4: ${field4Value}`;
+    document.getElementById('dataDisplay').innerHTML = `Presssure sensor 1: ${field3Value}<br>Presssure sensor 2: ${field4Value}`;
     enableButtons();
   })
   .catch(error => console.error('Error fetching data:', error));
@@ -42,7 +42,7 @@ function checkData() {
     const field3Value = latestEntry.field3;
     const field4Value = latestEntry.field4;
 
-    document.getElementById('dataDisplay').innerHTML = `Field1: ${field1Value}<br>Field2: ${field2Value}<br>Field3: ${field3Value}<br>Field4: ${field4Value}`;
+    document.getElementById('dataDisplay').innerHTML = `Flow sensor 1: ${field1Value}<br>Flow sensor 2: ${field2Value}<br>Presssure sensor 1: ${field3Value}<br>Presssure sensor 2: ${field4Value}`;
     const status = document.getElementById('status');
     if (field1Value === field2Value && field3Value === field4Value) {
       status.innerText = 'Fields are stable';
