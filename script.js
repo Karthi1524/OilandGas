@@ -15,6 +15,7 @@ function fetchFlowData() {
 }
 }
 
+
 function fetchPressureData() {
   if(temp2===1){
   fetch('https://api.thingspeak.com/channels/2516914/feeds.json?results=1')
